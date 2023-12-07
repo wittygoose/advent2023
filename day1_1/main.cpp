@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include "../include/Performance.hpp"
 
 int main() {
     std::ifstream file("../day1_1/input.txt");
@@ -10,6 +11,7 @@ int main() {
         return 1;
     }
     int result = 0;
+    Performance perf;
     for (std::string line; std::getline(file, line);) {
         char first_digit = '0', last_digit = '0';
         // start from beginning

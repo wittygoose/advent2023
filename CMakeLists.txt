@@ -4,4 +4,7 @@ project(advent2023)
 
 set(CMAKE_CXX_STANDARD 14)
 
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
 add_executable(day1_1 day1_1/main.cpp)
+add_executable(day1_2 day1_2/main.cpp)
