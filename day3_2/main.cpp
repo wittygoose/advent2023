@@ -44,6 +44,7 @@ int main() {
     std::ifstream file("../day3_2/input.txt");
     if (!file.is_open()) {
         std::cerr << "failed to open input.txt" << std::endl;
+        return 1;
     }
     Performance perf;
     int result = 0;
