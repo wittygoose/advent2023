@@ -102,7 +102,10 @@ int main() {
                     if (digit_finished) {
                         if (digit_index == 0) range.destination = digit;
                         else if (digit_index == 1) range.start = digit;
-                        else range.finish = range.start + digit - 1;
+                        else {
+                            range.finish = range.start + digit;
+                            if (range.finish > 0) range.finish -= 1;
+                        }
                         digit = 0;
                         digit_finished = false;
                         ++digit_index;
